@@ -4,7 +4,8 @@
   "description": "A simple website to open and host you software development skills , Reach experienced developers .",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server":"nodemon server"
   },
   "repository": {
     "type": "git",
