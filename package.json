@@ -1,0 +1,23 @@
+{
+  "name": "SkillConnect",
+  "version": "1.0.0",
+  "description": "A simple website to open and host you software development skills , Reach experienced developers .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fawzinajjar/SkillConnect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fawzinajjar/SkillConnect/issues"
+  },
+  "homepage": "https://github.com/fawzinajjar/SkillConnect#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
