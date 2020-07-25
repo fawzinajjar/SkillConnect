@@ -1,6 +1,10 @@
-const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURI');
+const mongoose = require('mongoose'); // Import Mangoose Model //
+const config = require('config'); // Import Config Folder //
+const db = config.get('mongoURI'); // Assign the Mongodb URI Path And Access Account //
+
+// Establishing Connection function With Mongodb DataBase And pathing the 'URI' // 
+// Declaring async function Inside ConnectDB function //
+// Used Try/Catch to handle eroors and wait to db to be connected //
 
 const connectDB = async () => {
     try {
@@ -15,4 +19,5 @@ const connectDB = async () => {
     }
 }
 
-module.exports = connectDB;
+
+module.exports = connectDB; // exported the module connectDB //
