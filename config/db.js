@@ -9,7 +9,9 @@ const db = config.get('mongoURI'); // Assign the Mongodb URI Path And Access Acc
 const connectDB = async () => {
     try {
         await mongoose.connect(db, {
-            useNewUrlParser:true
+            useNewUrlParser:true,
+            useCreateIndex:true,
+            useUnifiedTopology:true
         });
         console.log('MongoDB Connected...');
     } catch (err) {
