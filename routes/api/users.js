@@ -1,3 +1,4 @@
+// Register user And save the data after validation to data base
 const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
@@ -41,9 +42,10 @@ async (req, res) => {
             avatar,
             password
         });
-        // bcrypting the password
+        // bcrypting the password //
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
+        // saved the user to mongodb webstorage.
         await user.save();
 
         const payload = {
@@ -51,7 +53,7 @@ async (req, res) => {
                 id: user.id
             }
         };
-        // Signing the token
+        // Signing the token //
         jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 360000000000 }, 
         (err, token) => { 
             if (err) throw err;

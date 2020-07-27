@@ -1,5 +1,4 @@
 {
     "mongoURI": "mongodb+srv://test:test@skillconnect.a6cng.mongodb.net/SkillConnect?retryWrites=true&w=majority",
     "jwtSecret": "mysecrettoken"
-
 }

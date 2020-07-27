@@ -2,10 +2,10 @@ const mongoose = require('mongoose'); // Import Mangoose Model //
 const config = require('config'); // Import Config Folder //
 const db = config.get('mongoURI'); // Assign the Mongodb URI Path And Access Account //
 
-// Establishing Connection function With Mongodb DataBase And pathing the 'URI' // 
-// Declaring async function Inside ConnectDB function //
-// Used Try/Catch to handle eroors and wait to db to be connected //
 
+// we exported the async function connectDB that will use mongoose package to connect 
+// to databsae with the connect() method , we use dtry catch to  handle if there an error and we used await 
+// that belongs to asyn function to pass a promise and return connection
 const connectDB = async () => {
     try {
         await mongoose.connect(db, {
@@ -19,7 +19,7 @@ const connectDB = async () => {
         //Exit process with failure
         process.exit(1);
     }
-}
+};
 
 
 module.exports = connectDB; // exported the module connectDB //
