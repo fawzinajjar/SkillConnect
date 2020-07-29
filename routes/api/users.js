@@ -36,7 +36,7 @@ async (req, res) => {
             r: 'pg',
             d: 'mm'
         })
-        user = new  User({
+        user = new User({
             name,
             email,
             avatar,
