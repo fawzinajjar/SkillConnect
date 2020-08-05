@@ -1,6 +1,5 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const { removeAllListeners } = require('nodemon');
 const app = express();
 
 
@@ -12,6 +11,15 @@ app.use(express.json({ extended: false }));
 
 // Defining Route that node server will handle and accept req res on it //
 app.get('/', (req, res) => res.send('API Running'));
+
+
+/*
+const router = express.Router();
+router.get('/a', (req, res) => res.send('API Running a'));
+router.get('/b', (req, res) => res.send('API Running b'));
+router.get('/c', (req, res) => res.send('API Running c'));
+app.use('/api/user', router)
+*/
 
 // Defining Routes that node server will handle and accept req res on them //
 app.use('/api/users', require('./routes/api/users'));

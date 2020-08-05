@@ -4,11 +4,12 @@ const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
+//const validator = require('express-validator');
 const User  = require('../../models/User');
 const jwt = require('jsonwebtoken');
 const config = require('config')
 // @route   POST api/Users //
-// @desc    Register //
+// @desc    Register a new user//
 // @access  Public //
 
 router.post('/',
@@ -24,7 +25,11 @@ async (req, res) => {
       return res.status(400).json({ errors: errors.array() });
     }
     // registering the user
-    const { name, email, password } = req.body;
+    const { name, email, password } = req.body; 
+    //like saying const name = req.body.name ...
+    
+    
+
 
     try {
         let user = await User.findOne({ email })
@@ -54,7 +59,7 @@ async (req, res) => {
             }
         };
         // Signing the token //
-        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 360000000000 }, 
+        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 3600000000 }, 
         (err, token) => { 
             if (err) throw err;
             res.json({ token });
