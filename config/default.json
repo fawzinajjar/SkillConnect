@@ -1,5 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://test:test@skillconnect.a6cng.mongodb.net/SkillConnect?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://skillconnect:skillconnect@skillconnect.a6cng.mongodb.net/SkillConnect?retryWrites=true&w=majority",
     "jwtSecret": "mysecrettoken",
     "githubClientId": "3faab08f4635ac6adc16",
     "githubSecret": "62c0985747c446e7f1eb38bb098723059bbe955e"
